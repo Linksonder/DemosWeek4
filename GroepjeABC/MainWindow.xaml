@@ -1,0 +1,14 @@
+﻿<Window x:Class="GroepjeABC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+        DataContext="{Binding Main, Source={StaticResource Locator}}"  >
+    <StackPanel>
+        <DataGrid ItemsSource="{Binding Onderdelen}" SelectedItem="{Binding SelectedOnderdeel}"/>
+        <WrapPanel>
+            <Button Command="{Binding AddOnderdeelCommand}" >Add Onderdeel</Button>
+            <Button Command="{Binding OpenPonyCommand}" >Open Pony</Button>
+        </WrapPanel>
+        <DataGrid ItemsSource="{Binding Eenhoorn}" SelectedItem="{Binding SelectedOnderdeel}"/>
+    </StackPanel>
+</Window>
