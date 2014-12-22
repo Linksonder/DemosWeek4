@@ -1,0 +1,19 @@
+﻿<Window x:Class="tPleintje.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+        DataContext="{Binding Main, Source={StaticResource Locator}}" >
+
+    <StackPanel>
+        <DataGrid ItemsSource="{Binding Snacks}" SelectedItem="{Binding SelectedSnack}" />
+        
+        <Button Command="{Binding AddSnackCommand}">Add snack to bestelling</Button>
+
+        <DataGrid ItemsSource="{Binding Bestelling}" SelectedItem="{Binding SelectedSnack}" />
+        
+        <Button Command="{Binding AddWindowCommand}">Add SNack Window</Button>
+
+    </StackPanel>
+    
+    
+</Window>
